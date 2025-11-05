@@ -51,3 +51,27 @@ console.log("-----------------")
     }
     console.log(stars);
  }
+
+ console.log("-----------------")
+/*     Hallow Diamond  
+      *
+     * *
+    *   *
+   *     *
+    *   *
+     * *
+      *
+
+*/
+
+    let n=7;
+    for(let i=1;i<=n;i++){
+        let str="";
+    for(let j=1;j<=n-1;j++){
+         str = str + " "
+    }
+    for(let k=1;k<=2*i-1;k++){
+       str = str +"*"
+    }
+ console.log(str);
+}

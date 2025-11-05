@@ -50,41 +50,6 @@ for(let i= 1; i <= N; i++){
 
 // scopes
 
-// console.log(numbers); // Gives: numbers is not defined
-
-//console.log({letVariable}); // Gives: Cannot access 'letVariable' before initialization
-
-let letVariable; // has global scope as it's not in any block
-
-// console.log({letVariable}); // prints "undefined"
-
-dfg = 12; //global variable -> not a good practice
-
-console.log({dfg});
-
-//console.log(undeclaredVariable); // Gives: undeclaredVariable is not defined
-
-
-{
-    var emptyBlockVariable = "abcd"; //var is not block scoped, but function scoped
-    console.log({emptyBlockVariable});
-
-}
-console.log({emptyBlockVariable});// Gives: undeclaredVariable is not defined
-
-{
-    const emptyBlockVariable = "abcd";
-    //console.log({emptyBlockVariableChild});// Gives: emptyBlockVariableChild is not defined
-    {
-        const emptyBlockVariableChild = "abcde";
-        console.log("===inside block===", {emptyBlockVariable: emptyBlockVariableChild});
-    }
-
-}
-
-console.log({varVariable});
-var varVariable = "6";
-
 
 
 
@@ -113,3 +78,5 @@ for(let i=0;i<N;i++){
 }
 console.log(star);
 }
+
+

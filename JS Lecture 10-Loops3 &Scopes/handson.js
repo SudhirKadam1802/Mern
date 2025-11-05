@@ -45,5 +45,36 @@ for(let i=1;i<=s;i++){
       }
 
 
+      
+console.log("============");
+/*
+     *  
+   * * *
+ * * * * *
+   * * *
+     *
+*/
+
+let n=5;
+for(let i=1;i<=Math.ceil(n/2);i++){
+    let str = "";
+    for(let j=1;j<=Math.ceil(n/2)-i;j++){
+        str = str + "  ";
+    }
+    for(let k=1;k<=(2*i)-1;k++){
+      str= str + "* ";
+    }
+    console.log(str);
+}
+for(let i=Math.floor(n/2);i>=1;i--){
+    let str = "";
+    for(let j=1;j<=Math.ceil(n/2)-i;j++){
+        str = str + "  ";
+    }
+    for(let k=1;k<=(2*i)-1;k++){
+      str= str + "* ";
+    }
+    console.log(str);
+}
 
  
