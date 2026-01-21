@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="password" name="" id="">
+    <br/>  
+    <input type="date">
+    <br/>
+    <input type="time">
+    <br/>
+    <input type="checkbox">
+    <input type="checkbox">
+      <input type="checkbox">
+    <input type="checkbox">
+    <br/>
+    <input  name="mcq" type="radio" value="optionA">
+    <input name="mcq" type="radio" value="optionB">
+     <input  name="mcq" type="radio" value="optionC">
+    <input name="mcq" type="radio" value="optionD">
+    <br/>
+
+ <input  name="mcq2" type="radio" value="optionA">
+ <input name="mcq2" type="radio" value="optionB">
+ <input  name="mcq2" type="radio" value="optionC">
+ <input name="mcq2" type="radio" value="optionD">
+ <br/>
+ <select name="" id="">
+    <option value="">Select Option</option>
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+    <option>D</option>
+ </select>
+<br>
+ <select name="" id="" multiple="true" size="2">
+    <option value="">Multiple Select</option>
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+    <option>D</option>
+ </select>
+ <br>
+ <input type="file" name="" id="">
+ <br>
+<button>Submit</button>
+ <script>
+    const submitBtn = document.querySelector("button"); 
+   submitBtn.addEventListener("click", ()=> {
+    const inputs = {};
+    inputs.password = document.querySelector("input[type=password]").value;
+   inputs.allCheckBoxes = document.querySelectorAll("input[type=checkbox]:checked");
+//  inputs.date = document.querySelector("input[type=date]").value;
+   inputs.date = new Date(document.querySelector("input[type=date]").value);  //more preferable
+   inputs.time = document.querySelector("input[type=time]").value;
+   inputs.radiobutton1 = document.querySelector("input[name=mcq]:checked")?.value;
+   inputs.radiobutton2 = document.querySelector("input[name=mcq2]:checked")?.value;
+   inputs.selectedOption = document.querySelector("select")?.value;
+   const multipleSelectOptions = document.querySelector("[multiple=true]")
+   inputs.multiSelectedOptions = Array.from(multipleSelectOptions).filter((ele)=> ele.selected).map((ele)=> ele.value);
+//    inputs.file = document.querySelector("input[type=file]").value;
+   inputs.file = document.querySelector("input[type=file]").files;
+    console.log(inputs);
+   });
+
+   document.querySelector("input[type=password]").addEventListener("change", (e)=>{
+    console.log(e.target.value);
+   });
+
+   document.querySelector("input[type=password]").addEventListener("input", (e)=>{
+    console.log(e.target.value);
+   });
+
+ </script>
+</body>
+</html>
